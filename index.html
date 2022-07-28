@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap");
+      * {
+        font-family: "Baloo 2", cursive;
+        scroll-behavior: smooth;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg"
+      style="background-color: #b9fffc; z-index: 9999"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">StartrJs</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#docs"
+                >Docs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#cdn">CDN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Download</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Support
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Contact Me</a></li>
+                <li><a class="dropdown-item" href="#">Forums</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAV End -->
+
+    <!-- Main  BODY Start -->
+    <section id="home">
+      <h1 style="color: black" class="p-2">Startr Js</h1>
+      <p class="ms-3" style="font-size: 22px">
+        StartrJs is a fast, small, and feature-rich JavaScript framework. It makes
+        things like HTML document traversal and manipulation, event handling,
+        and Ajax much simpler with an easy-to-use API that works across a
+        multitude of browsers. With a combination of versatility and
+        extensibility, StartrJs has changed the way that 1 of people write
+        JavaScript.
+      </p>
+      <div style="font-size: 22px;" class="alert alert-info col-5 ms-2 text-black" role="alert">A Brief Look</div>
+      <p style="font-size: 18px; color: black" class="ms-2 mt-2">
+        <b>DOM Traversal and Manipulation</b>
+      </p>
+      <p class="ms-3">
+        Get the <kbd>&#60;button&#62;</kbd> element with the class 'continue'
+        and change its HTML to 'Next Step...'
+      </p>
+      <div class="alert alert-secondary col-10 ms-2" role="alert">
+        <code> setTxt("txt","A sample Code!"); </code>
+      </div>
+      <p style="font-size: 18px; color: black" class="ms-2 mt-2">
+        <b>Event Handling</b>
+      </p>
+      <p class="ms-3">
+        Show the <kbd>message</kbd> element that is hidden with <span style="color: crimson;">display:none</span> in its CSS when <kbd>&#60;button&#62;</kbd>  is clicked.
+      </p>
+      <div class="alert alert-secondary col-10 ms-2" role="alert">
+        <code> btnclk("sub",()=>{ show("msg") }); </code>
+      </div>
+      <p style="font-size: 18px; color: black" class="ms-2 mt-2">
+        <b>Ajax Request</b>
+      </p>
+      <p class="ms-3">
+        Call a local script on the server <span style="color: crimson;">/api/checkUser</span> with the query parameter <span style="color: crimson;">userId = uid_1011 </span> and check user already exists or not, with the returned respons text.
+      </p>
+      <div class="alert alert-secondary col-10 ms-2" role="alert">
+        <code>
+          Ajax({<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">url:&nbsp;&nbsp;</span><span style="color: blue;">"/api/checkUser"</span>,<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">method</span>: <span style="color: blue;">"POST"</span>,<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">data</span>: {<br>
+           &nbsp;&nbsp;&nbsp;   <span style="color: green;">st</span>: <span style="color: blue;">true</span>,<br>
+           &nbsp;&nbsp;&nbsp;   <span style="color: green;">userId</span>: <span style="color: blue;">"uid_1011"</span><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">success</span>: <span style="color: blue;">(respons) </span>=> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTxt("status",respons)<br>
+            &nbsp;&nbsp;&nbsp;}<br>
+          })
+        </code>
+      </div>
+    </section>
+    <br /><br />
+    <section id="docs">
+      <h2 class="ms-3">Docs</h2>
+      <p class="alert alert-warning ms-2 text-black text-xl-start" role="alert">How to use StartrJs.&nbsp; Full Documentation.</p>
+      <br>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>select(id)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.</p>
+        use : &nbsp;&nbsp;&nbsp; select("t")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t &nbsp;&nbsp;->&nbsp;&nbsp; &#60;p id="t">Hello&#60;/p>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>getVal(id)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.</p>
+        use : &nbsp;&nbsp;&nbsp; getVal("name")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; name &nbsp;&nbsp;->&nbsp;&nbsp; &#60;input type="text" id="name">&#60;/input>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>setTxt(id,msg)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.&nbsp;&nbsp;| msg&nbsp;&nbsp;->&nbsp;&nbsp;set your text here</p>
+        use : &nbsp;&nbsp;&nbsp; setTxt("span","Sample Text.")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; span &nbsp;&nbsp;->&nbsp;&nbsp; &#60;span id="span">Sample Text.&#60;/span>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>setHtml(id,html)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.&nbsp;&nbsp;| html&nbsp;&nbsp;->&nbsp;&nbsp;code html here</p>
+        use : &nbsp;&nbsp;&nbsp; setHtml("t1",&nbsp;'&#60;b>Sample Text.&#60;/b>')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t1 &nbsp;&nbsp;->&nbsp;&nbsp; &#60;p id="t1"><b>Sample Text.</b>&#60;/p>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>btnclk(id,event)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.&nbsp;&nbsp;| event&nbsp;&nbsp;->&nbsp;&nbsp;code event function.</p>
+        use : &nbsp;&nbsp;&nbsp; btnclk("t",()=> {<br>
+          &nbsp;&nbsp; setTxt("span","Sample Text.")<br>
+        })&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t &nbsp;&nbsp;->&nbsp;&nbsp; &#60;button id="t">&#60;/button>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>addClass(id,class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.&nbsp;&nbsp;| class&nbsp;&nbsp;->&nbsp;&nbsp;set css class</p>
+        use : &nbsp;&nbsp;&nbsp; addClass("t","phone")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t &nbsp;&nbsp;->&nbsp;&nbsp; &#60;p id="t" class="phone">&#60;/p>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>removeClass(id,class)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.&nbsp;&nbsp;| class&nbsp;&nbsp;->&nbsp;&nbsp;remove css class</p>
+        use : &nbsp;&nbsp;&nbsp; removeClass("t","phone")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t &nbsp;&nbsp;->&nbsp;&nbsp; &#60;p id="t">&#60;/p>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>show(id)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.</p>
+        use : &nbsp;&nbsp;&nbsp; show("t")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t &nbsp;&nbsp;->&nbsp;&nbsp; &#60;p id="t" style="display:block;">&#60;/p>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>hide(id)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.</p>
+        use : &nbsp;&nbsp;&nbsp; hide("t")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t &nbsp;&nbsp;->&nbsp;&nbsp; &#60;p id="t" style="display:none;">&#60;/p>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>txtcolor(id,color)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id - Any HTML tag id.&nbsp;&nbsp;| color&nbsp;&nbsp;->&nbsp;&nbsp;color name</p>
+        use : &nbsp;&nbsp;&nbsp; txtcolor("t","red")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp; t &nbsp;&nbsp;->&nbsp;&nbsp; &#60;p id="t"><span style="color:red">Sample Text.</span>&#60;/p>.
+      </div>
+      <div class="alert alert-secondary col-10 ms-2 text-black" role="alert">
+        <p>Ajax(url,method,data,respons)&nbsp;&nbsp;&nbsp;// url - like.php, main.asp, dex.js&nbsp;&nbsp;| method&nbsp;&nbsp;->POST / GET | data = {  st: 1,  name: "admin"  }</p>
+        use :<br>&nbsp;&nbsp;&nbsp; POST &nbsp; :-<code>
+          <div class="post">
+          Ajax({<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">url:&nbsp;&nbsp;</span><span style="color: blue;">"/api/checkUser"</span>,<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">method</span>: <span style="color: blue;">"POST"</span>,<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">data</span>: {<br>
+           &nbsp;&nbsp;&nbsp;   <span style="color: green;">st</span>: <span style="color: blue;">true</span>,<br>
+           &nbsp;&nbsp;&nbsp;   <span style="color: green;">userId</span>: <span style="color: blue;">"uid_1011"</span><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">success</span>: <span style="color: blue;">(respons) </span>=> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTxt("status",respons)<br>
+            &nbsp;&nbsp;&nbsp;}<br>
+          })<br></div>
+          <div class="get">
+          &nbsp;&nbsp;&nbsp;<span style="color: black; font-size:16px;">GET :-</span><code>
+          Ajax({<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">url:&nbsp;&nbsp;</span><span style="color: blue;">"/api/checkUser"</span>,<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">method</span>: <span style="color: blue;">"GET"</span>,<br>
+           &nbsp;&nbsp;&nbsp; <span style="color: green;">success</span>: <span style="color: blue;">(respons) </span>=> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTxt("status",respons)<br>
+            &nbsp;&nbsp;&nbsp;}</div>
+          })
+        </code>
+      </div>
+    </section>
+    <section id="cdn">
+      <h3 class="alert alert-warning ms-2 col-8 text-black text-xl-start" role="alert">CDN Links</h3>
+      <p style="font-size: 16px" class="alert alert-info ms-2 col-10 text-black" role="alert">
+        <span><b>StartrJs</b></span><br>
+        &#60;script src="http://shovan.rf.gd/api/startr.js">&#60;/script></p>
+      <p style="font-size: 16px" class="alert alert-info ms-2 col-10 text-black" role="alert">
+        <span><b>StartrMinJs</b></span><br>
+        &#60;script src="http://shovan.rf.gd/api/startr.min.js">&#60;/script></p>
+    </section>
+    <!-- BODY  END -->
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"
+  ></script>
+</html>
