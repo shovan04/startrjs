@@ -1,3 +1,6 @@
+/*
+  a simple javascript framework was created by shovan mondal.
+*/
 select = (id) => {
   return document.getElementById(`${id}`);
 };
