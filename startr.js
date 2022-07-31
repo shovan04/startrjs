@@ -8,10 +8,10 @@ getVal = (id) => {
   return document.getElementById(`${id}`).value;
 };
 setTxt = (id, msg) => {
-  return (document.getElementById(`${id}`).innerText = msg);
+  return (document.getElementById(`${id}`).innerText = `${msg}`);
 };
 setHtml = (id, msg) => {
-  return (document.getElementById(`${id}`).innerHTML = msg);
+  return (document.getElementById(`${id}`).innerHTML = `${msg}`);
 };
 btnclk = (id, event) => {
   return document.getElementById(`${id}`).addEventListener("click", event);
