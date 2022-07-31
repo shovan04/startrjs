@@ -53,11 +53,10 @@ Ajax = function ({
         success(repons);
         return repons;
       } else if (post.readyState == 4 && post.status == 404) {
-        let get_data = post.responseText;
-        const data = get_data.textContent;
-        alert(post.responseURL + "\n\n" + data);
-        error(data);
-        return data;
+        let repons = post.responseText;
+        alert(post.responseURL+'\n\n'+post.response);
+        error(repons);
+        return repons;
       }
     };
     post.open("POST", url, true);
@@ -73,7 +72,7 @@ Ajax = function ({
         return repons;
       } else if (post.readyState == 4 && get.status == 404) {
         let repons = get.responseText;
-        alert(get.responseURL + "\n\n" + get.response);
+        alert(get.responseURL+'\n\n'+get.response);
         error(repons);
         return repons;
       }
