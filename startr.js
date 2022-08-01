@@ -8,13 +8,16 @@ getVal = (id) => {
   return document.getElementById(`${id}`).value;
 };
 setTxt = (id, msg) => {
-  return (document.getElementById(`${id}`).innerText = `${msg}`);
+  return (document.getElementById(`${id}`).innerText = msg);
 };
 setHtml = (id, msg) => {
-  return (document.getElementById(`${id}`).innerHTML = `${msg}`);
+  return (document.getElementById(`${id}`).innerHTML = msg);
 };
 btnclk = (id, event) => {
   return document.getElementById(`${id}`).addEventListener("click", event);
+};
+keyUp = (id, event) => {
+  return document.getElementById(`${id}`).addEventListener("keyup", event);
 };
 addClass = (id, cls) => {
   return document.getElementById(`${id}`).classList.add(`${cls}`);
@@ -54,7 +57,7 @@ Ajax = function ({
         return repons;
       } else if (post.readyState == 4 && post.status == 404) {
         let repons = post.responseText;
-        alert(post.responseURL+'\n\n'+post.response);
+        alert(post.responseURL+'\n\n'+repons);
         error(repons);
         return repons;
       }
@@ -72,7 +75,7 @@ Ajax = function ({
         return repons;
       } else if (post.readyState == 4 && get.status == 404) {
         let repons = get.responseText;
-        alert(get.responseURL+'\n\n'+get.response);
+        alert(get.responseURL+'\n\n'+repons);
         error(repons);
         return repons;
       }
