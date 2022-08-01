@@ -1,5 +1,7 @@
 /*
   a simple javascript framework was created by shovan mondal.
+  
+  ** StartrJs is a fast, small, and feature-rich JavaScript framework. It makes things like HTML document traversal and manipulation, event handling, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, StartrJs has changed the way that 1 of people write JavaScript. **
 */
 select = (id) => {
   return document.getElementById(`${id}`);
