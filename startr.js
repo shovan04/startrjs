@@ -19,7 +19,7 @@ btnclk = (id, event) => {
   return document.getElementById(`${id}`).addEventListener("click", event);
 };
 onchange = (id, event) => {
-  return document.getElementById(`${id}`).onchange = event;
+  return document.getElementById(`${id}`).addEventListener("onchange", event);
 };
 
 keyUp = (id, event) => {
