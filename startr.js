@@ -18,10 +18,6 @@ setHtml = (id, msg) => {
 btnclk = (id, event) => {
   return document.getElementById(`${id}`).addEventListener("click", event);
 };
-onchange = (id, event) => {
-  return document.getElementById(`${id}`).onchange = event;
-};
-
 keyUp = (id, event) => {
   return document.getElementById(`${id}`).addEventListener("keyup", event);
 };
