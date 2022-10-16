@@ -4,7 +4,7 @@
   ** StartrJs is a fast, small, and feature-rich JavaScript framework. It makes things like HTML document traversal and manipulation, event handling, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, StartrJs has changed the way that 1 of people write JavaScript. **
 */
 select = (id) => {
-  return document.getElementById(`${id}`);
+  return document.querySelector(`${id}`);
 };
 getVal = (id) => {
   return document.getElementById(`${id}`).value;
@@ -15,10 +15,10 @@ setTxt = (id, msg) => {
 setHtml = (id, msg) => {
   return (document.getElementById(`${id}`).innerHTML = msg);
 };
-btnclk = (id, event) => {
+btnclk = (id, event = () => {}) => {
   return document.getElementById(`${id}`).addEventListener("click", event);
 };
-keyUp = (id, event) => {
+keyUp = (id, event = () => {}) => {
   return document.getElementById(`${id}`).addEventListener("keyup", event);
 };
 addClass = (id, cls) => {
