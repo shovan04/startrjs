@@ -7,34 +7,34 @@ select = (id) => {
   return document.querySelector(`${id}`);
 };
 getVal = (id) => {
-  return document.getElementById(`${id}`).value;
+  return document.querySelector(`${id}`).value;
 };
 setTxt = (id, msg) => {
-  return (document.getElementById(`${id}`).innerText = msg);
+  return (document.querySelector(`${id}`).innerText = msg);
 };
 setHtml = (id, msg) => {
-  return (document.getElementById(`${id}`).innerHTML = msg);
+  return (document.querySelector(`${id}`).innerHTML = msg);
 };
 btnclk = (id, event = () => {}) => {
-  return document.getElementById(`${id}`).addEventListener("click", event);
+  return document.querySelector(`${id}`).addEventListener("click", event);
 };
 keyUp = (id, event = () => {}) => {
-  return document.getElementById(`${id}`).addEventListener("keyup", event);
+  return document.querySelector(`${id}`).addEventListener("keyup", event);
 };
 addClass = (id, cls) => {
-  return document.getElementById(`${id}`).classList.add(`${cls}`);
+  return document.querySelector(`${id}`).classList.add(`${cls}`);
 };
 removeClass = (id, cls) => {
-  return document.getElementById(`${id}`).classList.remove(`${cls}`);
+  return document.querySelector(`${id}`).classList.remove(`${cls}`);
 };
 show = (id) => {
-  return (document.getElementById(`${id}`).style.display = "block");
+  return (document.querySelector(`${id}`).style.display = "block");
 };
 hide = (id) => {
-  return (document.getElementById(`${id}`).style.display = "none");
+  return (document.querySelector(`${id}`).style.display = "none");
 };
 txtcolor = (id, _name) => {
-  return (document.getElementById(`${id}`).style.color = _name);
+  return (document.querySelector(`${id}`).style.color = _name);
 };
 Ajax = function ({
   url,
